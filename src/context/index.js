@@ -47,9 +47,25 @@ const creatorSlice=createSlice({
 })
 
 
+const userSlice=createSlice(
+      {
+            name: "user",
+            initialState: {
+                  donatedCreators: []
+            },
+            reducers: {
+                  setDonatedCreators: (state, action) => {
+                        state.donatedCreators.push(action.payload);
+                  }
+            }
+      }
+)
+
+
 export const store=configureStore({
       reducer: {
             creator: creatorSlice.reducer,
+            user: userSlice.reducer,
       }
 })
 
@@ -57,3 +73,4 @@ export const {
       setCurrentCreator
 }=creatorSlice.actions;
 
+export const {setDonatedCreators}=userSlice.actions;

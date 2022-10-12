@@ -2,6 +2,7 @@ import React from 'react';
 import Popup from '../components/contentPopup';
 import DisplayArea from '../components/display';
 import NavigationPanel from '../components/navigation';
+import RecordTable from '../components/table';
 
 const Home=() => {
       return (
@@ -9,6 +10,7 @@ const Home=() => {
                   <NavigationPanel />
                   <DisplayArea />
                   <Popup />
+                  <RecordTable />
             </div>
       );
 }
